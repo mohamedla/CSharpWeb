@@ -1,0 +1,100 @@
+﻿<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width" />
+        <title>@ViewBag.Title</title>
+        <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+        <link rel="stylesheet" href="~/css/Main.css" asp-append-version="true" />
+
+        <link rel="stylesheet" href="~/Products.styles.css" asp-append-version="true" />
+
+        <script src="~/lib/jquery/dist/jquery.min.js"></script>
+
+    </head>
+    <body>
+        <header>
+        <h1><a asp-area="" asp-page="/Prds">Products</a></h1>
+        <nav>
+          <a  asp-area="" asp-page="/Prds">Home</a>
+          <a href="">About</a>
+          <a href="">Gallery</a>
+          <a href="">Contact</a>
+        </nav>
+      </header>
+      <div class="wrapper" >
+        @RenderBody()
+      </div>
+    <!-- Site footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 col-md-6">
+                    <h6>About</h6>
+                    <p class="text-justify"> Simple Web App To Display Products </p>
+                </div>
+
+                <div class="col-xs-6 col-md-3">
+                    <h6>Categories</h6>
+                    <ul class="footer-links">
+                        <li><a asp-page="/Prds/Create">>Create Product</a></li>
+                        <li><a asp-page="/Prds/Index">>Show All Products</a></li>
+                        <li><a asp-page="/Prds/Details?id=1">>Show Product</a></li>
+                        <li><a asp-page="/Prds/Edit?id=1">>Edit Product</a></li>
+                        <li><a asp-page="/Prds/Delete?id=1">>Delete Product</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-xs-6 col-md-3">
+                    <h6>Quick Links</h6>
+                    <ul class="footer-links">
+                        <a asp-area="" asp-page="/Prds">Home</a>
+                        <li><a href="">About Us</a></li>
+                        <li><a href="">Contact Us</a></li>
+                        <li><a href="">Contribute</a></li>
+                        <li><a asp-area="" asp-page="/Privacy">Privacy Policy</a></li>
+                        <li><a href="">Sitemap</a></li>
+                    </ul>
+                </div>
+            </div>
+            <hr>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 col-sm-6 col-xs-12">
+                    <p class="copyright-text">
+                        Copyright &copy; 2023 All Rights Reserved by
+                        <a href="https://github.com/mohamedla">MoAsh</a>.
+                    </p>
+                </div>
+
+                <div class="col-md-4 col-sm-6 col-xs-12">
+                    <ul class="social-icons">
+                        <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
+                        <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
+                        <li><a class="dribbble" href="#"><i class="fa fa-dribbble"></i></a></li>
+                        <li><a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+      @await RenderSectionAsync("Scripts", required: false)
+      <script>
+          
+          $(function(){
+              $(window).scroll(function(){
+                var winTop = $(window).scrollTop();
+                if(winTop >= 30){
+                  $("body").addClass("sticky-header");
+                }else{
+                  $("body").removeClass("sticky-header");
+                }//if-else
+              });//win func.
+            });//ready func.
+      </script>
+    </body>
+</html>

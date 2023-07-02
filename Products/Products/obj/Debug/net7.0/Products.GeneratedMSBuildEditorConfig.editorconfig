@@ -1,0 +1,69 @@
+is_global = true
+build_property.TargetFramework = net7.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = Products
+build_property.RootNamespace = Products
+build_property.ProjectDir = D:\WorkSpace\Repos\GitHup\CSharpWeb\Products\Products\
+build_property.RazorLangVersion = 7.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = D:\WorkSpace\Repos\GitHup\CSharpWeb\Products\Products
+build_property._RazorSourceGeneratorDebug = 
+
+[D:/WorkSpace/Repos/GitHup/CSharpWeb/Products/Products/Pages/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3IuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/WorkSpace/Repos/GitHup/CSharpWeb/Products/Products/Pages/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/WorkSpace/Repos/GitHup/CSharpWeb/Products/Products/Pages/Prds/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJkc1xDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/WorkSpace/Repos/GitHup/CSharpWeb/Products/Products/Pages/Prds/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJkc1xEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/WorkSpace/Repos/GitHup/CSharpWeb/Products/Products/Pages/Prds/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJkc1xEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/WorkSpace/Repos/GitHup/CSharpWeb/Products/Products/Pages/Prds/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJkc1xFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/WorkSpace/Repos/GitHup/CSharpWeb/Products/Products/Pages/Prds/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJkc1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/WorkSpace/Repos/GitHup/CSharpWeb/Products/Products/Pages/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJpdmFjeS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/WorkSpace/Repos/GitHup/CSharpWeb/Products/Products/Pages/Shared/_MyLayout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9NeUxheW91dC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/WorkSpace/Repos/GitHup/CSharpWeb/Products/Products/Pages/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/WorkSpace/Repos/GitHup/CSharpWeb/Products/Products/Pages/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/WorkSpace/Repos/GitHup/CSharpWeb/Products/Products/Pages/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/WorkSpace/Repos/GitHup/CSharpWeb/Products/Products/Pages/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-8457qbw4i3
