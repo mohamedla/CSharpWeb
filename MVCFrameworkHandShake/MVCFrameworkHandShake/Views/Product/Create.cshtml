@@ -1,0 +1,63 @@
+﻿@model MVCFrameworkHandShake.Models.Product
+
+@{
+    ViewData["Title"] = "Create";
+    var Suppliers = (List<MVCFrameworkHandShake.Models.ToSelect>)ViewBag.SupplierId;
+    var Categories = (List<MVCFrameworkHandShake.Models.ToSelect>)ViewBag.CategoryId;
+}
+
+<h1>Create</h1>
+
+<h4>Product</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post" action="/Product/Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label for="ProductName" class="control-label">ProductName</label>
+                <input required name="ProductName" class="form-control" />
+                <span asp-validation-for="Product.ProductName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label for="SupplierId" class="control-label">Supplier</label>
+                <select name="SupplierId" class="form-control" asp-items="" required>
+                    @foreach (var item in Suppliers)
+                    {
+                        <option value="@item.Id">@item.Name</option>
+                    }
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="CategoryId" class="control-label">Category</label>
+                <select name="CategoryId" class="form-control" asp-items="ViewBag.CategoryId" required>
+                    @foreach (var item in Categories)
+                    {
+                        <option value="@item.Id">@item.Name</option>
+                    }
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="QuantityPerUnit" class="control-label">Quantity Per Unit</label>
+                <input name="QuantityPerUnit" class="form-control" required />
+                <span asp-validation-for="Product.QuantityPerUnit" class="text-danger"></span>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" type="checkbox" name="Discontinued" /> &nbsp;&nbsp;&nbsp;&nbsp; Discontinued
+                </label>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a href="/Product">Back to List</a>
+</div>
+
+
+@Scripts.Render("~/Scripts/jquery.validate.min.js")
+@Scripts.Render("~/Scripts/jquery.validate.unobtrusive.min.js")

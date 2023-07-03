@@ -1,0 +1,72 @@
+﻿@model MVCFrameworkHandShake.Models.Product
+
+@{ 
+    var product = (MVCFrameworkHandShake.Models.Product)ViewBag.Product;
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Product</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => product.ProductName)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => product.ProductName)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => product.QuantityPerUnit)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => product.QuantityPerUnit)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => product.UnitPrice)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => product.UnitPrice)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => product.UnitsInStock)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => product.UnitsInStock)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => product.UnitsOnOrder)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => product.UnitsOnOrder)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => product.ReorderLevel)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => product.ReorderLevel)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => product.Discontinued)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => product.Discontinued)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => product.Category)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => product.Category.CategoryName)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => product.Supplier)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => product.Supplier.CompanyName)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a href="/Product/Edit/@product.ProductId">Edit</a> |
+    <a href="/Product">Back to List</a>
+</div>

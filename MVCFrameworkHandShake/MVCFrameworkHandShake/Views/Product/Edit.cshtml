@@ -1,0 +1,110 @@
+﻿@model MVCFrameworkHandShake.Models.Product
+
+@{
+    ViewData["Title"] = "Edit";
+    var Product = (MVCFrameworkHandShake.Models.Product)ViewBag.Product;
+    var Suppliers = (List<MVCFrameworkHandShake.Models.ToSelect>)ViewBag.SupplierId;
+    var Categories = (List<MVCFrameworkHandShake.Models.ToSelect>)ViewBag.CategoryId;
+}
+
+<h1>Edit</h1>
+
+<h4>Product</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" value="@Product.ProductId" name="ProductId"/>
+            <div class="form-group">
+                <label for="ProductName" class="control-label"></label>
+                <input name="ProductName" value="@Product.ProductName" class="form-control" />
+                <span asp-validation-for="Product.ProductName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label for="SupplierId" class="control-label">Supplier</label>
+                <select name="SupplierId" class="form-control" asp-items="" required>
+                    @foreach (var item in Suppliers)
+                    {
+                        if (item.Id == Product.SupplierId)
+                        {
+                            <option value="@item.Id" selected>@item.Name</option>
+                        }
+                        else
+                        {
+                            <option value="@item.Id">@item.Name</option>
+                        }
+                    }
+                </select>
+                <span asp-validation-for="@Product.SupplierId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label for="CategoryId" class="control-label">Category</label>
+                <select name="CategoryId" class="form-control" asp-items="ViewBag.CategoryId" required>
+                    @foreach (var item in Categories)
+                    {
+                        if (item.Id == Product.CategoryId)
+                        {
+                            <option value="@item.Id" selected>@item.Name</option>
+                        }
+                        else
+                        {
+                            <option value="@item.Id">@item.Name</option>
+                        }
+                    }
+                </select>
+                <span asp-validation-for="@Product.CategoryId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label for="QuantityPerUnit" class="control-label">QuantityPerUnit</label>
+                <input name="QuantityPerUnit" value="@Product.QuantityPerUnit" class="form-control" />
+                <span asp-validation-for="@Product.QuantityPerUnit" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label for="UnitPrice" class="control-label">UnitPrice</label>
+                <input name="UnitPrice" value="@Product.UnitPrice" class="form-control" />
+                <span asp-validation-for="@Product.UnitPrice" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label for="UnitsInStock" class="control-label">UnitsInStock</label>
+                <input name="UnitsInStock" value="@Product.UnitsInStock" class="form-control" />
+                <span asp-validation-for="@Product.UnitsInStock" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label for="UnitsOnOrder" class="control-label">UnitsOnOrder</label>
+                <input name="UnitsOnOrder" value="@Product.UnitsOnOrder" class="form-control" />
+                <span asp-validation-for="@Product.UnitsOnOrder" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label for="ReorderLevel" class="control-label">ReorderLevel</label>
+                <input name="ReorderLevel" value="@Product.ReorderLevel" class="form-control" />
+                <span asp-validation-for="@Product.ReorderLevel" class="text-danger"></span>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    @if (Product.Discontinued)
+                    {
+
+
+                        <input class="form-check-input" type="checkbox" name="Discontinued" checked />
+                    }
+                    else
+                    {
+                        <input class="form-check-input" type="checkbox" name="Discontinued"/>
+                    }
+                    @Html.DisplayNameFor(model => Product.Discontinued)
+                </label>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a href="/product">Back to List</a>
+</div>
+
+@Scripts.Render("~/Scripts/jquery.validate.min.js")
+@Scripts.Render("~/Scripts/jquery.validate.unobtrusive.min.js")
