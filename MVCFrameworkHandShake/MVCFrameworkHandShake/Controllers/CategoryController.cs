@@ -47,20 +47,20 @@ namespace MVCFrameworkHandShake.Controllers
 
         // POST: Category/Create
         [HttpPost]
-        public ActionResult Create(FormCollection collection)
+        public ActionResult Create(Category collection)
         {
             Category category;
             try
             {
-                category = new Category()
-                {
-                    CategoryName = collection["CategoryName"],
-                    Description = collection["Description"]
-                };
+                //category = new Category()
+                //{
+                //    CategoryName = collection["CategoryName"],
+                //    Description = collection["Description"]
+                //};
                 // TODO: Add insert logic here
                 using (NorthwindContext context = new NorthwindContext())
                 {
-                    context.Categories.Add(category);
+                    context.Categories.Add(collection);
                     context.SaveChanges();
                 }
                 return RedirectToAction("Index");
