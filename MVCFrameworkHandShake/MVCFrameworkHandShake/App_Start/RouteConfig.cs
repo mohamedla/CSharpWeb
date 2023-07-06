@@ -13,6 +13,7 @@ namespace MVCFrameworkHandShake
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
+            //To Enable Attribute Routes
             routes.MapMvcAttributeRoutes();
 
             routes.MapRoute(

@@ -13,6 +13,7 @@ using MVCFrameworkHandShake.Models;
 namespace MVCFrameworkHandShake.Controllers
 {
     //[HandleError(View = "Error")] Error Handeler on Controller Level
+    [AllowAnonymous]
     public class SuppliersController : Controller
     {
         private NorthwindContext db = new NorthwindContext();

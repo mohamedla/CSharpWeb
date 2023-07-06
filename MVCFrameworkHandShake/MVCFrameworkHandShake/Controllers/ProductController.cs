@@ -11,6 +11,7 @@ using System.Web.WebPages;
 
 namespace MVCFrameworkHandShake.Controllers
 {
+    [AllowAnonymous]
     public class ProductController : Controller
     {
         // GET: Product

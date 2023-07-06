@@ -8,6 +8,9 @@ namespace MVCFrameworkHandShake
         public static void RegisterGlobalFilters(GlobalFilterCollection filters)
         {
             filters.Add(new HandleErrorAttribute());
+
+            //For Enabling AuthRization
+            filters.Add(new AuthorizeAttribute());
         }
     }
 }

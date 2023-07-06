@@ -9,6 +9,7 @@ using System.Web.Mvc;
 
 namespace MVCFrameworkHandShake.Controllers
 {
+    [AllowAnonymous]
     [RoutePrefix("Categories")]
     public class CategoryController : Controller
     {
