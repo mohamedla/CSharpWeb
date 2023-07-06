@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 using System.Web;
 using System.Web.Mvc;
 using System.Web.WebPages;
+using MVCFrameworkHandShake.Custom.Filters;
 
 namespace MVCFrameworkHandShake.Controllers
 {
@@ -16,6 +17,7 @@ namespace MVCFrameworkHandShake.Controllers
     public class ProductController : Controller
     {
         // GET: Product
+        [DebugFilter] // Use My Custom Action Filter to Write Data In Debug Screen
         public ActionResult Index()
         {
             using (NorthwindContext context = new NorthwindContext())
@@ -161,6 +163,7 @@ namespace MVCFrameworkHandShake.Controllers
         }
 
         // POST: Product/Delete/5
+        [NonAction] // Disable the Delete by Make the Action un Accessible
         [HttpPost]
         public ActionResult Delete(int id, FormCollection collection)
         {
