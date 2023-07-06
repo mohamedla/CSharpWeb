@@ -70,10 +70,10 @@
                     @Html.DisplayFor(modelItem => item.Discontinued)
                 </td>
                 <td>
-                    @Html.DisplayFor(modelItem => item.Category.CategoryName)
+                    <a href="~/Product/@Html.DisplayFor(modelItem => item.Category.CategoryId)/Category">@Html.DisplayFor(modelItem => item.Category.CategoryName)</a>
                 </td>
                 <td>
-                    @Html.DisplayFor(modelItem => item.Supplier.CompanyName)
+                    <a href="Product/@Html.DisplayFor(modelItem => item.Supplier.SupplierId)/Supplier">@Html.DisplayFor(modelItem => item.Supplier.CompanyName)</a>
                 </td>
                 <td>
                     <a href="/Product/Edit/@item.ProductId">Edit</a> |

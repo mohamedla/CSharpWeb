@@ -9,9 +9,13 @@ using System.Web.Mvc;
 
 namespace MVCFrameworkHandShake.Controllers
 {
+    [RoutePrefix("Categories")]
     public class CategoryController : Controller
     {
         // GET: Category
+        // GET: Category/Index
+        [Route("Index")]
+        [Route("")]
         public ActionResult Index()
         {
             List<Category> Categories;
@@ -25,6 +29,9 @@ namespace MVCFrameworkHandShake.Controllers
         }
 
         // GET: Category/Details/5
+        // GET: Product/{id:int}/Category
+        [Route("Details/{id:int}")]
+        [Route("~/Product/{id:int}/Category")]
         public ActionResult Details(int id)
         {
             Category category;
@@ -39,6 +46,7 @@ namespace MVCFrameworkHandShake.Controllers
         }
 
         // GET: Category/Create
+        [Route("Create")]
         public ActionResult Create()
         {
             Category category = new Category();
@@ -47,6 +55,7 @@ namespace MVCFrameworkHandShake.Controllers
 
         // POST: Category/Create
         [HttpPost]
+        [Route("Create")]
         public ActionResult Create(Category collection)
         {
             Category category;
@@ -73,6 +82,7 @@ namespace MVCFrameworkHandShake.Controllers
         }
 
         // GET: Category/Edit/5
+        [Route("Edit/{id:int}")]
         public ActionResult Edit(int id)
         {
             Category category;
@@ -88,6 +98,7 @@ namespace MVCFrameworkHandShake.Controllers
 
         // POST: Category/Edit/5
         [HttpPost]
+        [Route("Edit/{id:int}")]
         public ActionResult Edit(int id, FormCollection collection)
         {
             Category category;
@@ -114,6 +125,7 @@ namespace MVCFrameworkHandShake.Controllers
         }
 
         // GET: Category/Delete/5
+        [Route("Delete/{id:int}")]
         public ActionResult Delete(int id)
         {
             Category category;
@@ -128,6 +140,7 @@ namespace MVCFrameworkHandShake.Controllers
         }
 
         // POST: Category/Delete/5
+        [Route("Delete/{id:int}")]
         [HttpPost]
         public ActionResult Delete(int id, FormCollection collection)
         {

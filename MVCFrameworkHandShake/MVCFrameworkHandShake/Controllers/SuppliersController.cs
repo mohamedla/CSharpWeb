@@ -27,6 +27,9 @@ namespace MVCFrameworkHandShake.Controllers
         }
 
         // GET: Suppliers/Details/5
+        // GET: Product/{id:int}/Supplier
+        [Route("Suppliers/Details/{id:int}")]
+        [Route("Product/{id:int}/Supplier")]
         public ActionResult Details(int? id)
         {
             if (id == null)
