@@ -67,14 +67,23 @@ namespace MVCFrameworkHandShake.Controllers
                 //    Description = collection["Description"]
                 //};
                 // TODO: Add insert logic here
-                using (NorthwindContext context = new NorthwindContext())
+                if (collection.CategoryName is null || collection.CategoryName == "M")
                 {
-                    context.Categories.Add(collection);
-                    context.SaveChanges();
+                    ModelState.AddModelError("CategoryName", "Must Enter a Name");
                 }
-                return RedirectToAction("Index");
+                if (ModelState.IsValid)
+                {
+                    using (NorthwindContext context = new NorthwindContext())
+                    {
+                        context.Categories.Add(collection);
+                        context.SaveChanges();
+                        return RedirectToAction("Index");
+                    }
+                }
+                category = new Category();
+                return View(category);
             }
-            catch(Exception e)
+            catch (Exception e)
             {
                 category = new Category();
                 return View(category);
