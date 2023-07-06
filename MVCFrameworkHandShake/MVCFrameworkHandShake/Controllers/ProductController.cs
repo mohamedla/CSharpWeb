@@ -11,6 +11,7 @@ using System.Web.WebPages;
 
 namespace MVCFrameworkHandShake.Controllers
 {
+    //Allow unauthrized access
     [AllowAnonymous]
     public class ProductController : Controller
     {
@@ -30,6 +31,7 @@ namespace MVCFrameworkHandShake.Controllers
         }
 
         // GET: Product/Details/5
+        [OutputCache(Duration = 60)] // Cach The Output Data For 1 Min
         public ActionResult Details(int id)
         {
             using (NorthwindContext context = new NorthwindContext())

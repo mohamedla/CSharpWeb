@@ -9,8 +9,8 @@ using System.Web.Mvc;
 
 namespace MVCFrameworkHandShake.Controllers
 {
-    [AllowAnonymous]
-    [RoutePrefix("Categories")]
+    [AllowAnonymous]//Allow unauthrized access
+    [RoutePrefix("Categories")] // an Routing entry point
     public class CategoryController : Controller
     {
         // GET: Category
