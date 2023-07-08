@@ -10,13 +10,15 @@ namespace MVCFrameworkHandShake.Context
     public class NorthwindContext : DbContext
     {
         //NorthwindEntities
-        public NorthwindContext() : base("data source=(LocalDb)\\MSSQLLocalDB;initial catalog=Northwind;integrated security=True;") { }
+        public NorthwindContext() : base("NorthWind") { }
 
         public virtual DbSet<Category> Categories { get; set; }
 
         public virtual DbSet<Product> Products { get; set; }
 
         public virtual DbSet<Supplier> Suppliers { get; set; }
+
+        public DbSet<User> Users { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

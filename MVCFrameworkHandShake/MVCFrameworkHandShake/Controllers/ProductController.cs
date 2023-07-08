@@ -13,7 +13,7 @@ using MVCFrameworkHandShake.Custom.Filters;
 namespace MVCFrameworkHandShake.Controllers
 {
     //Allow unauthrized access
-    [AllowAnonymous]
+    //[AllowAnonymous]
     public class ProductController : Controller
     {
         // GET: Product
